@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1150" viewBox="0 0 1800 1150">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#333"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <style>
+      .title{font:700 34px Arial;fill:#111}
+      .section{font:700 22px Arial;fill:#111}
+      .box{stroke:#333;stroke-width:2;rx:12;ry:12}
+      .label{font:600 18px Arial;fill:#111}
+      .small{font:14px Arial;fill:#444}
+      .tiny{font:12px Arial;fill:#555}
+      .arrow{stroke:#333;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+      .blue{stroke:#2563eb;stroke-width:2.5;fill:none;marker-end:url(#arrowBlue)}
+      .dashed{stroke-dasharray:8 6}
+    </style>
+  </defs>
+
+  <rect width="1800" height="1150" fill="#fff"/>
+  <text x="900" y="55" text-anchor="middle" class="title">Netflix — High-Level System Design</text>
+  <text x="900" y="85" text-anchor="middle" class="small">Scalable video streaming, content delivery, recommendations and playback architecture</text>
+
+  <!-- Clients -->
+  <text x="70" y="135" class="section">Clients</text>
+  <rect x="50" y="155" width="190" height="75" class="box" fill="#e8f1ff"/>
+  <text x="145" y="185" text-anchor="middle" class="label">Web App</text>
+  <text x="145" y="210" text-anchor="middle" class="small">Browser / React</text>
+  <rect x="50" y="255" width="190" height="75" class="box" fill="#e8f1ff"/>
+  <text x="145" y="285" text-anchor="middle" class="label">Mobile App</text>
+  <text x="145" y="310" text-anchor="middle" class="small">Android / iOS</text>
+  <rect x="50" y="355" width="190" height="75" class="box" fill="#e8f1ff"/>
+  <text x="145" y="385" text-anchor="middle" class="label">Smart TV</text>
+  <text x="145" y="410" text-anchor="middle" class="small">TV / Console</text>
+
+  <!-- Edge -->
+  <text x="315" y="135" class="section">Edge Layer</text>
+  <rect x="295" y="170" width="210" height="80" class="box" fill="#fff3cd"/>
+  <text x="400" y="202" text-anchor="middle" class="label">DNS / CDN</text>
+  <text x="400" y="226" text-anchor="middle" class="small">Route to nearest edge</text>
+  <rect x="295" y="285" width="210" height="80" class="box" fill="#fff3cd"/>
+  <text x="400" y="317" text-anchor="middle" class="label">API Gateway</text>
+  <text x="400" y="341" text-anchor="middle" class="small">Auth, rate limit, routing</text>
+  <rect x="295" y="400" width="210" height="80" class="box" fill="#fff3cd"/>
+  <text x="400" y="432" text-anchor="middle" class="label">Load Balancer</text>
+  <text x="400" y="456" text-anchor="middle" class="small">Distribute API traffic</text>
+
+  <!-- Services -->
+  <text x="580" y="135" class="section">Core Services</text>
+  <rect x="555" y="155" width="220" height="75" class="box" fill="#e9f8ef"/>
+  <text x="665" y="185" text-anchor="middle" class="label">User Service</text>
+  <text x="665" y="209" text-anchor="middle" class="small">Profiles / accounts</text>
+  <rect x="555" y="250" width="220" height="75" class="box" fill="#e9f8ef"/>
+  <text x="665" y="280" text-anchor="middle" class="label">Catalog Service</text>
+  <text x="665" y="304" text-anchor="middle" class="small">Movies / shows / metadata</text>
+  <rect x="555" y="345" width="220" height="75" class="box" fill="#e9f8ef"/>
+  <text x="665" y="375" text-anchor="middle" class="label">Playback Service</text>
+  <text x="665" y="399" text-anchor="middle" class="small">Manifest / DRM / sessions</text>
+  <rect x="555" y="440" width="220" height="75" class="box" fill="#e9f8ef"/>
+  <text x="665" y="470" text-anchor="middle" class="label">Search Service</text>
+  <text x="665" y="494" text-anchor="middle" class="small">Titles / actors / genres</text>
+  <rect x="555" y="535" width="220" height="75" class="box" fill="#e9f8ef"/>
+  <text x="665" y="565" text-anchor="middle" class="label">Recommendation</text>
+  <text x="665" y="589" text-anchor="middle" class="small">Personalized ranking</text>
+  <rect x="555" y="630" width="220" height="75" class="box" fill="#e9f8ef"/>
+  <text x="665" y="660" text-anchor="middle" class="label">Billing Service</text>
+  <text x="665" y="684" text-anchor="middle" class="small">Plans / payments</text>
+
+  <!-- Data -->
+  <text x="850" y="135" class="section">Data &amp; Messaging</text>
+  <rect x="825" y="155" width="220" height="75" class="box" fill="#f2eaff"/>
+  <text x="935" y="185" text-anchor="middle" class="label">User DB</text>
+  <text x="935" y="209" text-anchor="middle" class="small">Profiles / subscriptions</text>
+  <rect x="825" y="250" width="220" height="75" class="box" fill="#f2eaff"/>
+  <text x="935" y="280" text-anchor="middle" class="label">Content DB</text>
+  <text x="935" y="304" text-anchor="middle" class="small">Metadata / availability</text>
+  <rect x="825" y="345" width="220" height="75" class="box" fill="#f2eaff"/>
+  <text x="935" y="375" text-anchor="middle" class="label">Search Index</text>
+  <text x="935" y="399" text-anchor="middle" class="small">Distributed text index</text>
+  <rect x="825" y="440" width="220" height="75" class="box" fill="#f2eaff"/>
+  <text x="935" y="470" text-anchor="middle" class="label">Cache</text>
+  <text x="935" y="494" text-anchor="middle" class="small">Hot metadata / sessions</text>
+  <rect x="825" y="535" width="220" height="75" class="box" fill="#f2eaff"/>
+  <text x="935" y="565" text-anchor="middle" class="label">Event Stream</text>
+  <text x="935" y="589" text-anchor="middle" class="small">Kafka-like events</text>
+  <rect x="825" y="630" width="220" height="75" class="box" fill="#f2eaff"/>
+  <text x="935" y="660" text-anchor="middle" class="label">Analytics DB</text>
+  <text x="935" y="684" text-anchor="middle" class="small">Views / clicks / watch time</text>
+
+  <!-- Content pipeline -->
+  <text x="1130" y="135" class="section">Content Pipeline</text>
+  <rect x="1105" y="155" width="220" height="75" class="box" fill="#ffe9e9"/>
+  <text x="1215" y="185" text-anchor="middle" class="label">Content Upload</text>
+  <text x="1215" y="209" text-anchor="middle" class="small">Studio / licensed source</text>
+  <rect x="1105" y="250" width="220" height="75" class="box" fill="#ffe9e9"/>
+  <text x="1215" y="280" text-anchor="middle" class="label">Transcoding</text>
+  <text x="1215" y="304" text-anchor="middle" class="small">Multiple resolutions/codecs</text>
+  <rect x="1105" y="345" width="220" height="75" class="box" fill="#ffe9e9"/>
+  <text x="1215" y="375" text-anchor="middle" class="label">Packaging + DRM</text>
+  <text x="1215" y="399" text-anchor="middle" class="small">HLS/DASH + encryption</text>
+  <rect x="1105" y="440" width="220" height="75" class="box" fill="#ffe9e9"/>
+  <text x="1215" y="470" text-anchor="middle" class="label">Object Storage</text>
+  <text x="1215" y="494" text-anchor="middle" class="small">Master + encoded assets</text>
+
+  <!-- ML -->
+  <text x="1390" y="135" class="section">Recommendation / ML</text>
+  <rect x="1365" y="155" width="220" height="75" class="box" fill="#e8f8f7"/>
+  <text x="1475" y="185" text-anchor="middle" class="label">Feature Store</text>
+  <text x="1475" y="209" text-anchor="middle" class="small">User/content features</text>
+  <rect x="1365" y="250" width="220" height="75" class="box" fill="#e8f8f7"/>
+  <text x="1475" y="280" text-anchor="middle" class="label">Model Training</text>
+  <text x="1475" y="304" text-anchor="middle" class="small">Offline ML pipelines</text>
+  <rect x="1365" y="345" width="220" height="75" class="box" fill="#e8f8f7"/>
+  <text x="1475" y="375" text-anchor="middle" class="label">Model Serving</text>
+  <text x="1475" y="399" text-anchor="middle" class="small">Online ranking</text>
+  <rect x="1365" y="440" width="220" height="75" class="box" fill="#e8f8f7"/>
+  <text x="1475" y="470" text-anchor="middle" class="label">Experimentation</text>
+  <text x="1475" y="494" text-anchor="middle" class="small">A/B testing</text>
+
+  <!-- Connections clients -->
+  <path d="M240 192 L295 210" class="arrow"/>
+  <path d="M240 292 L295 215" class="arrow"/>
+  <path d="M240 392 L295 220" class="arrow"/>
+  <path d="M400 250 L400 285" class="arrow"/>
+  <path d="M400 365 L400 400" class="arrow"/>
+  <path d="M505 440 L555 192" class="arrow"/>
+  <path d="M505 440 L555 287" class="arrow"/>
+  <path d="M505 440 L555 382" class="arrow"/>
+  <path d="M505 440 L555 477" class="arrow"/>
+  <path d="M505 440 L555 572" class="arrow"/>
+  <path d="M505 440 L555 667" class="arrow"/>
+
+  <!-- Services to data -->
+  <path d="M775 192 L825 192" class="arrow"/>
+  <path d="M775 287 L825 287" class="arrow"/>
+  <path d="M775 382 L825 382" class="arrow"/>
+  <path d="M775 477 L825 477" class="arrow"/>
+  <path d="M775 572 L825 572" class="arrow"/>
+  <path d="M775 667 L825 667" class="arrow"/>
+  <path d="M665 610 L665 735 L935 735 L935 705" class="blue dashed"/>
+
+  <!-- Pipeline -->
+  <path d="M1105 192 L1080 192 L1080 190 L1045 190" class="arrow"/>
+  <path d="M1215 230 L1215 250" class="arrow"/>
+  <path d="M1215 325 L1215 345" class="arrow"/>
+  <path d="M1215 420 L1215 440" class="arrow"/>
+  <path d="M1105 477 L1045 477" class="arrow"/>
+  <path d="M1045 477 L1045 190" class="arrow dashed"/>
+
+  <!-- ML connections -->
+  <path d="M1045 572 L1100 572 L1100 190 L1365 190" class="blue dashed"/>
+  <path d="M1475 230 L1475 250" class="blue"/>
+  <path d="M1475 325 L1475 345" class="blue"/>
+  <path d="M1475 420 L1475 440" class="blue"/>
+  <path d="M1365 477 L1325 477 L1325 572 L1045 572" class="blue dashed"/>
+  <path d="M775 572 L800 572 L800 572 L825 572" class="blue dashed"/>
+
+  <!-- Streaming path -->
+  <rect x="1080" y="560" width="505" height="110" class="box" fill="#eef4ff"/>
+  <text x="1332" y="592" text-anchor="middle" class="label">Video Streaming Path</text>
+  <text x="1332" y="618" text-anchor="middle" class="small">Client → Playback Service → CDN Edge → Video Segments</text>
+  <text x="1332" y="642" text-anchor="middle" class="small">Adaptive bitrate selects 240p / 480p / 720p / 1080p / 4K</text>
+  <path d="M775 382 L850 382 L850 615 L1080 615" class="blue"/>
+
+  <!-- Bottom concerns -->
+  <text x="70" y="800" class="section">Key Design Decisions</text>
+  <rect x="50" y="825" width="385" height="245" class="box" fill="#fafafa"/>
+  <text x="75" y="860" class="label">Scalability</text>
+  <text x="75" y="890" class="small">• Stateless API services scale horizontally</text>
+  <text x="75" y="918" class="small">• CDN handles massive video traffic</text>
+  <text x="75" y="946" class="small">• Cache hot metadata and sessions</text>
+  <text x="75" y="974" class="small">• Partition large datasets by user/content</text>
+  <text x="75" y="1002" class="small">• Async event processing for analytics</text>
+  <text x="75" y="1030" class="small">• Multi-region deployment for resilience</text>
+
+  <rect x="470" y="825" width="385" height="245" class="box" fill="#fafafa"/>
+  <text x="495" y="860" class="label">Reliability</text>
+  <text x="495" y="890" class="small">• Replicated databases</text>
+  <text x="495" y="918" class="small">• Health checks + automatic failover</text>
+  <text x="495" y="946" class="small">• Retries with exponential backoff</text>
+  <text x="495" y="974" class="small">• Circuit breakers between services</text>
+  <text x="495" y="1002" class="small">• Idempotent payment operations</text>
+  <text x="495" y="1030" class="small">• Monitoring, logging and tracing</text>
+
+  <rect x="890" y="825" width="385" height="245" class="box" fill="#fafafa"/>
+  <text x="915" y="860" class="label">Performance</text>
+  <text x="915" y="890" class="small">• CDN serves video close to users</text>
+  <text x="915" y="918" class="small">• Adaptive bitrate avoids buffering</text>
+  <text x="915" y="946" class="small">• Prefetch next video segments</text>
+  <text x="915" y="974" class="small">• Search index for fast discovery</text>
+  <text x="915" y="1002" class="small">• Precompute recommendation candidates</text>
+  <text x="915" y="1030" class="small">• Keep critical APIs low-latency</text>
+
+  <rect x="1310" y="825" width="385" height="245" class="box" fill="#fafafa"/>
+  <text x="1335" y="860" class="label">Security</text>
+  <text x="1335" y="890" class="small">• TLS for network communication</text>
+  <text x="1335" y="918" class="small">• OAuth/session authentication</text>
+  <text x="1335" y="946" class="small">• DRM-protected video playback</text>
+  <text x="1335" y="974" class="small">• Tokenized playback URLs</text>
+  <text x="1335" y="1002" class="small">• Rate limiting and abuse detection</text>
+  <text x="1335" y="1030" class="small">• Encrypt sensitive data at rest</text>
+
+  <text x="900" y="1110" text-anchor="middle" class="tiny">High-level educational architecture — components are logical and can be implemented with different technologies.</text>
+</svg>
